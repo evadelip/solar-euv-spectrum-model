@@ -1,0 +1,33 @@
+; Asplund et al. 2021 Photospheric Abundances
+; log(N) + 12 scale (where H = 12)
+; Element  Z  log(N)+12
+H            1   12.00
+He           2   10.914
+Li           3    0.96
+Be           4    1.38
+B            5    2.70
+C            6    8.46
+N            7    7.83
+O            8    8.69
+F            9    4.40
+Ne          10    8.06
+Na          11    6.22
+Mg          12    7.55
+Al          13    6.43
+Si          14    7.51
+P           15    5.41
+S           16    7.12
+Cl          17    5.31
+Ar          18    6.38
+K           19    5.07
+Ca          20    6.30
+Sc          21    3.14
+Ti          22    4.97
+V           23    3.90
+Cr          24    5.62
+Mn          25    5.42
+Fe          26    7.46
+Co          27    4.94
+Ni          28    6.20
+Cu          29    4.18
+Zn          30    4.56
