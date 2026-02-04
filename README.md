@@ -1,15 +1,21 @@
-# Solar EUV Spectrum Synthesis Model
+# Solar EUV Spectrum Model
 
-A Python-based spectral synthesis tool for modeling solar extreme ultraviolet (EUV) spectra using CHIANTI atomic database and f30 radio flux diagnostics.
+A predictive model for solar Extreme Ultraviolet (EUV) irradiances, developed initially on IDL and then translatted to python, using the CHIANTI atomic database and f30 cm radio flux diagnostics. The model has been cross-validated against EVE spectra. 
+
+More etails can be found in Deliporanidou et. al. 2025, MNRAS paper:
+
+## Authors
+
+Evangelia (Eva) Deliporanidou and Giulio Del Zanna
 
 ## Features
 
-- **CHIANTI-based**: Uses baseline spectral lines from CHIANTI atomic database
+- **CHIANTI-based**: Uses baseline spectral lines from CHIANTI atomic database (theoretical emissivities)
 - **f30-dependent corrections**: Applies transition and ion-level corrections based on solar f30 radio flux (40-180)
 - **Density diagnostics**: Calculates electron density from Fe XII/XIII emission ratios
 - **Gaussian line profiles**: Convolves spectral lines with configurable FWHM (default 2.5 Å)
 - **Multi-band plotting**: Generates 11 wavelength-range plots (60-1040 Å)
-- **Continua modeling**: Includes Lyman 1/2 and He continuum components
+- **Continua modeling**: Includes Lyman and He continuum components
 
 ## Installation
 
@@ -35,9 +41,9 @@ python final_model.py
 ```
 
 When prompted, enter an f30 value:
-- **40-50**: Quiet Sun (QS)
-- **60-100**: Active Region (AR)
-- **140-180**: Active Sun (AS)
+- **40-70**: Quiet Sun (QS)
+- **70-120**: Medium Activity
+- **120-180**: Active Sun (AS)
 
 The script will:
 1. Load baseline spectral lines (CHIANTI format)
@@ -66,14 +72,9 @@ The script will:
 
 ## Output
 
-The script generates 11 sequential matplotlib plots displaying model spectra across different wavelength ranges. Plots show only the model spectrum (red) in 10^8 photons cm^-2 s^-1 Å^-1 units.
+The script generates 11 sequential plots displaying model spectra across different wavelength ranges. Plots show only the model spectrum (red) in 10^8 photons cm^-2 s^-1 Å^-1 units.
 
 ## Physical Model
-
-### Density Calculation
-Electron density is derived from Fe XII/XIII emission line ratios:
-
-$$\log_{10}(n_e) = 10.811510 - 2.793 \log_{10}(f30) + 0.837 \log_{10}^2(f30)$$
 
 ### Line Corrections
 Spectral line intensities are corrected based on:
@@ -87,14 +88,6 @@ Three continuum components with f30-dependent polynomial coefficients:
 - Lyman 2 (750-912 Å)
 - He continuum (450-504 Å)
 
-## Author
-
-Eva Delia
-
-## References
-
-- Asplund, M., et al. (2021) - Solar photospheric abundances
-- CHIANTI - Atomic database for astrophysics
 
 ## License
 
