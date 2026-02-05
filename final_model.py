@@ -59,7 +59,7 @@ def calculate_density_and_pressure(f30):
 
 #--- Function to read abundance file and create abundance dictionary ---
 
-def read_abundances(abund_file='python/sun_photospheric_2021_asplund.abund'):
+def read_abundances(abund_file='sun_photospheric_2021_asplund.abund'):
     """
     Read CHIANTI abundance file and return a dictionary of abundances by element.
     Format: Element symbol, Z, log(N)+12
